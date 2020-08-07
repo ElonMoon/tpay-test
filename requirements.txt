@@ -1,0 +1,5 @@
+Django==2.2
+djangorestframework==3.11.1
+drf-writable-nested==0.6.0
+pytz==2020.1
+sqlparse==0.3.1
