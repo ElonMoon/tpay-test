@@ -24,8 +24,8 @@ class ProductOptionSerializer(serializers.ModelSerializer):
 
 
 class ProductSerializer(WritableNestedModelSerializer):
-    option_set = ProductOptionSerializer(required=False, many=True)
-    tag_set = TagSerializer(required=False, many=True)
+    option_set = ProductOptionSerializer(many=True)
+    tag_set = TagSerializer(many=True)
 
     class Meta:
         model = Product
