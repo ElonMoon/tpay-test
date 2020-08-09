@@ -1,24 +1,16 @@
 version: 2.1
 
-orbs:
-  python: circleci/python@0.2.1
-
 jobs:
   build:
+    working_directory: /srv/tpay
     docker:
       - image: elonmoon/tpay
 
-    working_directory: /srv/tpay
-
     steps:
       - checkout
-
-      - attach_workspace: /srv/tpay/app
-
       - run:
           name: install dependencies
           command: pip3 install -r requirements.txt
-
       - run:
           name: run tests
           command: python3 manage.py test
