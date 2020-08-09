@@ -13,7 +13,7 @@ jobs:
     steps:
       - checkout
 
-      at: /srv/tpay/app
+      - attach_workspace: /srv/tpay/app
 
       - run:
           name: install dependencies
