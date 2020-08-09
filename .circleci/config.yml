@@ -8,7 +8,7 @@ jobs:
     docker:
       - image: elonmoon/tpay
 
-    working_directory: ~/repo
+    working_directory: /srv/tpay/app
 
     steps:
       - checkout
