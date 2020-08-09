@@ -1,6 +1,8 @@
 FROM        python:3.8.5-slim
 MAINTAINER  elonmoon@gmail.com
 
+ENV         LANG            C.UTF-8
+
 RUN         apt -y update
 RUN         apt -y dist-upgrade
 
