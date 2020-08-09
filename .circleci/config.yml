@@ -8,12 +8,16 @@ jobs:
     docker:
       - image: elonmoon/tpay
 
-    working_directory: /srv/tpay/app
+    working_directory: /srv/tpay
 
     steps:
+      - checkout
+
       - run:
           name: install dependencies
           command: pip3 install -r requirements.txt
+
+      working_directory: /srv/tpay/app
 
       - run:
           name: run tests
