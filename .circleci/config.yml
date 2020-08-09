@@ -15,4 +15,6 @@ jobs:
           name: run tests
           environment:
             CODECOV_TOKEN: 9253568e-3614-467e-a0ad-031f0265ea06
-          command: coverage run app/manage.py test codecov
+          command: |
+            coverage run app/manage.py test
+            codecov
