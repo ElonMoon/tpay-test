@@ -18,6 +18,7 @@ WORKDIR     /srv/tpay
 WORKDIR     /srv/tpay/app
 RUN         python3 manage.py collectstatic --noinput
 RUN         python3 manage.py migrate
+RUN         python3 manage.py addtag 'ExistTag'
 
 RUN         rm -rf /etc/nginx/sites-available/*
 RUN         rm -rf /etc/nginx/sites-enabled/*
