@@ -5,7 +5,7 @@
 - django 2.2
 
 ### 프로젝트 실행 방법
-1. `git clone https://github.com/ElonMoon/tpay-test.git`
+1. `git clone https://github.com/ElonMoon/tpay-test.git .`
 2. `docker build -t tpay -f Dockerfile .`
 3. `docker run --rm -it -p 8000:80 --name tpay tpay`
 4. URI `http://localhost:8000`
